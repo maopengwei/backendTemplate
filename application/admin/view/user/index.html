@@ -10,12 +10,11 @@
 <body>
 <nav class="breadcrumb">
 	<i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span>会员管理 <span class="c-gray en">&gt;</span> 会员列表 
-	<!-- <a class="btn btn-success radius r" style="line-height:1.5em;margin-top:3px" href="javascript:void(0);" onclick="downdo()" title="下载" ><i class="Hui-iconfont">&#xe640;</i></a>&nbsp;&nbsp; -->
+	<a class="btn btn-success radius r" style="line-height:1.5em;margin-top:3px;margin-left:2px;" href="javascript:void(0);"  title="下载" ><i class="Hui-iconfont">&#xe640;</i></a>&nbsp;&nbsp;
 	<a class="btn btn-success radius r" style="line-height:1.5em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
 </nav>
 <div class="page-container">
 	<div class="text-c">
-		<form class="Huiform" method="get" action="">
 			状态：
 			<span class="select-box inline">
 				<select name="us_status" class="select">
@@ -24,18 +23,10 @@
 					<option value="0" style="color:red;">被禁用</option>
 				</select>
 			</span>
-			经销商：
-			<span class="select-box inline">
-				<select name="us_is_jing" class="select">
-					<option value="">全部</option> 
-					<option value="0">非经销商</option> 
-					<option value="1">待入节点图</option>
-					<option value="2">经销商</option>
-				</select>
-			</span>
 			<input type="text" class="input-text" style="width:150px" placeholder="姓名、编号、手机号" id="" name="keywords" value="{$Request.get.keywords|default=''}">
-			<button type="submit" class="btn btn-success radius" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
-		</form>
+			<button class="btn btn-success radius" onclick="return search()" id="" name=""><i class="Hui-iconfont">&#xe665;</i> search</button>
+			<button class="btn btn-success radius" onclick="return download()" id="" name=""><i class="Hui-iconfont">&#xe640;</i> download </button>
+			
 	</div>
 	<div class="cl pd-5 bg-1 bk-gray mt-20">
 		<span class="l">
@@ -106,6 +97,7 @@ function creacrea(id){
 	var url = "{:url('tupu')}?id="+id+"&type=1";
 	creatIframe(url,'节点图');
 }
+
 /*------------------更改状态*/
 function change(id,value,key){
 	layer.confirm('确定要更改么？', {
@@ -140,19 +132,24 @@ function tupu(datt){
         }
     });
 }
-
-/*------------------下载*/
-function downdo(){
-	var url = window.location.href;
-	$.ajax({
-		type:'get',
-		url:url,
-		data:{a:1},
-		success:function(data){
-			window.location.href = data;
-		}
+/*------------------搜索*/
+function search(){
+	layer.confirm('你确定搜索么？', {btn: ['确定', '取消']}, function () {
+		var keywords = $('input[name="keywords"]').val();
+		var us_status = $('select[name="us_status"]').val();
+		window.location.href = '/admin/user/index?keywords='+keywords+'&us_status='+us_status;
 	})
 }
+
+/*------------------下载*/
+function download(){
+	layer.confirm('你确定导出么？', {btn: ['确定', '取消']}, function () {
+		var keywords = $('input[name="keywords"]').val();
+		var us_status = $('select[name="us_status"]').val();
+		window.location.href = '/admin/user/index?keywords='+keywords+'&us_status='+us_status+'&excel=excel';
+	})
+}
+
 /*------------------删除*/
 function del(id){
     layer.confirm('确定要删除么？', {

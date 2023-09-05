@@ -1,7 +1,7 @@
 <?php
 namespace app\admin\controller;
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use app\admin\logic\Excel;
+use think\Db;
 
 /**
  * @todo 会员管理 查看，状态变更，密码重置
@@ -11,6 +11,7 @@ class User extends Common {
 	// ------------------------------------------------------------------------
 	//用户列表
 	public function index() {
+
 		if (is_post()) {
 			$rst = model('User')->xiugai([input('post.key') => input('post.value')], ['id' => input('post.id')]);
 			return $rst;
@@ -24,35 +25,28 @@ class User extends Common {
 		if (is_numeric(input('get.us_is_jing'))) {
 			$this->map[] = ['us_is_jing', '=', input('get.us_is_jing')];
 		}
-		if (input('get.a') == 1) {
-			$list = model("User")->where($this->map)->select();
-			// $url = action('Excel/user', ['list' => $list]);
-			$bb = env('ROOT_PATH') . "public\user.xlsx";
-			if (file_exists($bb)) {
-				$aa = unlink($bb);
-			}
-			$spreadsheet = new Spreadsheet();
-			$sheet = $spreadsheet->getActiveSheet();
-			$sheet->setCellValue('A1', '账户名')
-				->setCellValue('B1', '真实姓名')
-				->setCellValue('C1', '电话号码')
-				->setCellValue('D1', '购物币')
-				->setCellValue('E1', '佣金')
-				->setCellValue('F1', '添加时间');
-			$i = 2;
-			foreach ($list as $k => $v) {
-				$sheet->setCellValue('A' . $i, $v['us_account'])
-					->setCellValue('B' . $i, $v['us_real_name'])
-					->setCellValue('C' . $i, $v['us_tel'])
-					->setCellValue('D' . $i, $v['us_wallet'])
-					->setCellValue('E' . $i, $v['us_msc'])
-					->setCellValue('F' . $i, $v['us_add_time']);
-				$i++;
-			}
-			$writer = new Xlsx($spreadsheet);
-			$writer->save('user.xlsx');
-			return "http://" . $_SERVER['HTTP_HOST'] . "/user.xlsx";
-		}
+		$get = $this->request->get();
+		
+		if(!empty($get['excel'])){
+            $sql =  DB::table('new_user')
+            ->alias('u')
+            ->join('user pu','pu.id = u.us_pid')
+            ->where($this->map)
+            ->field('
+				u.id,
+                u.us_account,
+                u.us_tel,
+				u.us_real_name,
+				u.us_status,
+				pu.us_account as p_account,
+                u.us_add_time
+            ')
+            ->order('u.id desc')
+            ->fetchSql(true)
+            ->select();
+            Excel::sql('user',$sql);
+
+        }
 
 		$list = model('User')->chaxun($this->map, $this->order, $this->size);
 		$this->assign(array(
