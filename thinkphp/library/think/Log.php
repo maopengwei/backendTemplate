@@ -266,7 +266,7 @@ class Log implements LoggerInterface
      * @param  array  $context   替换内容
      * @return void
      */
-    public function log($level, $message, array $context = []):void
+    public function log($level, $message, array $context = [])
     {
         $this->record($message, $level, $context);
     }
@@ -278,7 +278,7 @@ class Log implements LoggerInterface
      * @param  array  $context   替换内容
      * @return void
      */
-    public function emergency($message, array $context = []):void
+    public function emergency($message, array $context = [])
     {
         $this->log(__FUNCTION__, $message, $context);
     }
@@ -290,7 +290,7 @@ class Log implements LoggerInterface
      * @param  array  $context   替换内容
      * @return void
      */
-    public function alert($message, array $context = []):void
+    public function alert($message, array $context = [])
     {
         $this->log(__FUNCTION__, $message, $context);
     }
@@ -302,7 +302,7 @@ class Log implements LoggerInterface
      * @param  array  $context   替换内容
      * @return void
      */
-    public function critical($message, array $context = []):void
+    public function critical($message, array $context = [])
     {
         $this->log(__FUNCTION__, $message, $context);
     }
@@ -314,7 +314,7 @@ class Log implements LoggerInterface
      * @param  array  $context   替换内容
      * @return void
      */
-    public function error($message, array $context = []):void
+    public function error($message, array $context = [])
     {
         $this->log(__FUNCTION__, $message, $context);
     }
@@ -326,7 +326,7 @@ class Log implements LoggerInterface
      * @param  array  $context   替换内容
      * @return void
      */
-    public function warning($message, array $context = []):void
+    public function warning($message, array $context = [])
     {
         $this->log(__FUNCTION__, $message, $context);
     }
@@ -338,7 +338,7 @@ class Log implements LoggerInterface
      * @param  array  $context   替换内容
      * @return void
      */
-    public function notice($message, array $context = []):void
+    public function notice($message, array $context = [])
     {
         $this->log(__FUNCTION__, $message, $context);
     }
@@ -350,7 +350,7 @@ class Log implements LoggerInterface
      * @param  array  $context   替换内容
      * @return void
      */
-    public function info($message, array $context = []):void
+    public function info($message, array $context = [])
     {
         $this->log(__FUNCTION__, $message, $context);
     }
@@ -362,7 +362,7 @@ class Log implements LoggerInterface
      * @param  array  $context   替换内容
      * @return void
      */
-    public function debug($message, array $context = []):void
+    public function debug($message, array $context = [])
     {
         $this->log(__FUNCTION__, $message, $context);
     }

@@ -14,6 +14,8 @@
 lnmp环境搭建。指向入口文件: ROOT . /public/index
 composer update。
 
+添加 /config/database.php
+
 access url:  DomainName/admin/login/index.html
 default account: gly1001 123456
 
@@ -27,7 +29,7 @@ default account: gly1001 123456
 用户数据，详情，推荐人，节点图
 
 ```
-## 系统管理，配置。 🚗
+## 系统管理，配置。 ✅
 ## 生成excel文件。 🚗
 ## 发送数据到邮箱。 🚗
 ## 图片上传，多图上传

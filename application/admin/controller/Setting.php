@@ -7,10 +7,7 @@ use Cache;
  * @todo 配置信息管理
  */
 class Setting extends Common {
-	public function _initialize() {
-		parent::_initialize();
-	}
-	// --- ---------------------------------------------------------------------
+	
 	//
 	public function index() {
 		if (is_post()) {
@@ -18,6 +15,7 @@ class Setting extends Common {
 			model('Config')->xiugai($data);
 			$this->success('修改成功');
 		}
+		
 		return $this->fetch();
 	}
 	//系统参数
