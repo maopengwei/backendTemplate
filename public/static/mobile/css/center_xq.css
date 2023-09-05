@@ -1,0 +1,104 @@
+@import url(reset.css);
+.full {
+  width: 100%;
+  height: 100%;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  background: #f3f5f4;
+}
+.wrap header {
+  width: 100%;
+  height: 0.88rem;
+  background: #97c11f;
+  text-align: center;
+  line-height: 0.88rem;
+  position: relative;
+  color: white;
+}
+.wrap header h1 {
+  font-size: 0.32rem;
+  font-weight: bold;
+}
+.wrap header span {
+  width: 0.3rem;
+  height: 0.3rem;
+  background: none;
+  display: block;
+  border: 3px solid white;
+  border-top: none;
+  border-right: none;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+}
+.wrap section {
+  -webkit-box-flex: 1;
+  overflow: auto;
+}
+.wrap section dl {
+  font-size: 0.3rem;
+  text-align: center;
+}
+.wrap section dl dt {
+  margin-top: 0.72rem;
+}
+.wrap section dl dt img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius:50%;
+}
+.wrap section dl dd {
+  margin-top: 0.34rem;
+}
+.wrap section .main {
+  width: 100%;
+  height: auto;
+  background: none;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+  padding-top: 0.14rem;
+  padding-bottom: 0.14rem;
+  margin-top: 0.4rem;
+}
+.wrap section .main div {
+  line-height: 0.55rem;
+}
+.wrap section .main div p {
+  display: inline;
+  font-size: 0.26rem;
+  font-weight: bold;
+}
+.wrap section .main div span {
+  float: right;
+  font-size: 0.22rem;
+}
+.wrap section .main div .queren {
+  color: #2ca2f7;
+}
+.wrap section .btn{
+  width: 100%;
+  height: auto;
+   text-align: center;
+    margin-top: 0.3rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+.wrap section button{
+  width: 100%;
+  height: auto;
+  background: #97c11f;
+  color: white;
+  border: none;
+  outline: none;
+  line-height: 0.8rem;
+  border-radius: 0.5rem;
+}

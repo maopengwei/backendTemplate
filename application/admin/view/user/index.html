@@ -1,0 +1,178 @@
+{include file="public/_meta" /}
+<title></title>
+<style>
+	.Hui-iconfont{
+		margin:0 2px;
+		font-size:15px;
+	}
+</style>
+</head>
+<body>
+<nav class="breadcrumb">
+	<i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span>会员管理 <span class="c-gray en">&gt;</span> 会员列表 
+	<!-- <a class="btn btn-success radius r" style="line-height:1.5em;margin-top:3px" href="javascript:void(0);" onclick="downdo()" title="下载" ><i class="Hui-iconfont">&#xe640;</i></a>&nbsp;&nbsp; -->
+	<a class="btn btn-success radius r" style="line-height:1.5em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
+</nav>
+<div class="page-container">
+	<div class="text-c">
+		<form class="Huiform" method="get" action="">
+			状态：
+			<span class="select-box inline">
+				<select name="us_status" class="select">
+					<option value="">全部</option> 
+					<option value="1">正常</option> 
+					<option value="0" style="color:red;">被禁用</option>
+				</select>
+			</span>
+			经销商：
+			<span class="select-box inline">
+				<select name="us_is_jing" class="select">
+					<option value="">全部</option> 
+					<option value="0">非经销商</option> 
+					<option value="1">待入节点图</option>
+					<option value="2">经销商</option>
+				</select>
+			</span>
+			<input type="text" class="input-text" style="width:150px" placeholder="姓名、编号、手机号" id="" name="keywords" value="{$Request.get.keywords|default=''}">
+			<button type="submit" class="btn btn-success radius" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜索</button>
+		</form>
+	</div>
+	<div class="cl pd-5 bg-1 bk-gray mt-20">
+		<span class="l">
+			<a href="javascript:;" onclick="create(0,'add','添加用户')" class="btn btn-primary radius">
+			<i class="Hui-iconfont">&#xe600;</i> 用户</a>
+		</span> 
+		<span class="r">共有数据：<strong>{$list->total()}</strong> 条</span>
+	</div>
+	<div class="mt-20">
+		<table class="table table-border  table-hover table-bg table-sort">
+			<thead>
+				<tr class="text-c">				
+					<th>账户名</th>
+					<th>手机号</th>
+					<th>父账户</th>
+					<th>状态</th>
+					<th>添加时间</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				{volist name='list' id="vo"}
+					<tr class="text-c">
+						<td>{$vo.us_account}</td>
+						<td>{$vo.us_tel}</td>
+						<td>{$vo.ptel}</td>					
+						<td>{$vo.us_status_text}</td>					
+						<td>{$vo.us_add_time}</td>								
+						<td class="td-manage">
+							<a style="text-decoration:none"  class="xl-9" title="编辑" onclick="create({$vo.id},'edit','修改用户')" >
+								<i class="Hui-iconfont">&#xe6df;</i>
+							</a>
+							{if condition="$vo.us_is_jing eq 1 && $vo.us_pid eq 0"}
+							<a style="text-decoration:none" class="ml-9" title="等待填入推荐人"><i class="Hui-iconfont">&#xe611;</i></a>
+							{elseif condition="$vo.us_is_jing eq 1"}	
+							<a style="text-decoration:none" class="ml-9" onclick="tupu('{$vo.id}')" title="进入节点图">
+								<i class="Hui-iconfont">&#xe645;</i>
+							</a>
+							{elseif condition="$vo.us_is_jing eq 2"}
+							<a style="text-decoration:none" class="ml-7" onclick="creacrea({$vo.id})" title="我的节点图">
+								<i class="Hui-iconfont">&#xe653;</i>
+							</a>
+							{/if}
+							<a style="text-decoration:none" class="ml-7" onclick="del({$vo.id})" title="删除">
+								<i class="Hui-iconfont">&#xe706;</i>
+							</a>
+							<!-- <a href="{:url('excel')}" title="下载"><i class="Hui-iconfont">&#xe640;</i></a> -->
+						</td>
+					</tr>
+				{/volist}
+			</tbody>
+		</table>
+		<div class="pages" style="margin:20px;float: right; ">{$list|raw}</div>
+	</div>
+</div>
+{include file="public/_footer" /}
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript">
+	
+$('select[name="us_status"]').val({$Request.get.us_status});
+$('select[name="us_is_jing"]').val({$Request.get.us_is_jing});
+
+function create(id,url,key){
+	var url = "{:url('"+url+"')}?id="+id;
+	creatIframe(url,key);
+}
+function creacrea(id){
+	var url = "{:url('tupu')}?id="+id+"&type=1";
+	creatIframe(url,'节点图');
+}
+/*------------------更改状态*/
+function change(id,value,key){
+	layer.confirm('确定要更改么？', {
+	      btn: ['确定', '取消']
+	    }, function(index, layero){
+	        $.ajax({
+	            type: "post",
+	            url: "{:url('index')}",
+	            data: {id:id,value:value,key:key},
+	            success: function(data) {
+	             	if(data.code){
+	             		location.href = 'tupu';
+	             	}
+	            }
+	        });
+	    });
+}
+/*------------------进入图谱*/
+function tupu(datt){
+	$.ajax({
+        type: "get",
+        url: "{:url('is_jing')}",
+        data: {id:datt},
+        success: function(data) {
+            if(data.code==1){
+                setTimeout(function(){
+                    create(datt,'tupu','进入节点图')
+                },1000);
+            }else{
+            	layer.msg(data.msg);
+            }
+        }
+    });
+}
+
+/*------------------下载*/
+function downdo(){
+	var url = window.location.href;
+	$.ajax({
+		type:'get',
+		url:url,
+		data:{a:1},
+		success:function(data){
+			window.location.href = data;
+		}
+	})
+}
+/*------------------删除*/
+function del(id){
+    layer.confirm('确定要删除么？', {
+      btn: ['确定', '取消']
+    }, function(index, layero){
+        $.ajax({
+            type: "post",
+            url: "{:url('del')}",
+            data: {id:id},
+            success: function(data) {
+                layer.msg(data.msg);
+                if(data.code==1){
+                    setTimeout(function(){
+                        location.href = data.url;
+                    },1000);
+                }
+            }
+        });
+    });
+}	
+</script> 
+</body>
+</html>

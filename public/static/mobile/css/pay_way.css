@@ -1,0 +1,149 @@
+@import url(reset.css);
+.full {
+  width: 100%;
+  height: 100%;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  background: #f1f4f4;
+}
+.wrap img {
+  transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  max-height: 100%;
+  max-width: 100%;
+}
+.wrap header {
+  width: 100%;
+  height: 1rem;
+  background: #97c11f;
+  position: relative;
+}
+.wrap header img {
+  position: absolute;
+  top: 0.15rem;
+  left: 0.24rem;
+}
+.wrap header span {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.24rem;
+  color: white;
+  font-size: 0.22rem;
+}
+.wrap header p {
+  font-size: .32rem;
+  color: white;
+  text-align: center;
+  line-height: 1rem;
+}
+.wrap section {
+  -webkit-box-flex: 1;
+  overflow: auto;
+}
+.wrap section h1 {
+  font-size: 0.28rem;
+  line-height: 0.94rem;
+  margin-left: 0.3rem;
+}
+.wrap section h2 {
+  width: 100%;
+  height: 0.94rem;
+  background: rgba(210, 232, 198, 0.41);
+  font-size: 0.28rem;
+  line-height: 0.94rem;
+  margin-top: 0.3rem;
+  text-align: right;
+  padding-right: 0.3rem;
+  box-sizing: border-box;
+}
+.wrap section span {
+  color: red;
+  font-size: 0.35rem;
+}
+.wrap section .container {
+  width: 100%;
+  height: auto;
+  background: none;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  padding: 0 0.3rem;
+  box-sizing: border-box;
+  margin-top: 0.3rem;
+}
+.wrap section .container span {
+  width: 30%;
+  height: 1rem;
+  background: none;
+  display: block;
+  border: 1px solid #97c11f;
+  font-size: 0.28rem;
+  text-align: center;
+  line-height: 1rem;
+  border-radius: 0.2rem;
+}
+.wrap section .container span:nth-child(2) {
+  margin: 0 4%;
+}
+.wrap section .container .bgcolor {
+  color: white;
+  background: #97C11F;
+}
+.wrap section .zhifu {
+  width: 100%;
+  height: auto;
+  background: none;
+  padding: 0 0.3rem;
+  box-sizing: border-box;
+}
+.wrap section .zhifu div {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  font-size: 0.28rem;
+}
+.wrap section .zhifu div input {
+  width: 0.4rem;
+  height: 0.4rem;
+  margin-right: 0.2rem;
+  float: right;
+  margin-top: 0.15rem;
+}
+.wrap section .zhifu div img {
+  margin-right: 0.4rem;
+}
+.wrap section .zhifu ul {
+  margin-left: 0.3rem;
+}
+.wrap section .zhifu ul li {
+  line-height: 0.6rem;
+}
+.wrap section .queren {
+  width: 100%;
+  height: 0.9rem;
+  background: none;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  margin-top: 1rem;
+}
+.wrap section .queren span {
+  width: 100%;
+  height: 0.9rem;
+  background: #97c11f;
+  display: block;
+  line-height: 0.9rem;
+  text-align: center;
+  font-size: 0.28rem;
+  color: white;
+  border-radius: 0.5rem;
+}

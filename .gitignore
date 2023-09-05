@@ -1,0 +1,15 @@
+/vendor
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db
+/.idea
+/.vscode
+/.settings
+/.buildpath
+/.project
+/public/uploads/
+/runtime
+/config/database.php
+sftp-config.json
+als.sql

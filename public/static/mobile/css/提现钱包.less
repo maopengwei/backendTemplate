@@ -1,0 +1,154 @@
+@import url(reset.css);
+//html{
+//  font-size: 62.5%;
+//}
+.full{
+    width: 100%;
+    height: 100%;
+}
+.whb(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background: @b;
+}
+html,body,.wrap{
+    .full;
+}
+.box(@dir){
+    display: -webkit-box;
+    -webkit-box-orient: @dir;
+}
+.wrap{
+    .box(vertical);
+    background: #f1f4f4;
+   header{
+       .whb(100%,1rem,#97c11f);
+       position: relative;
+       img{
+           position: absolute;
+           top: 0.3rem;
+           left: 0.24rem;
+       }
+       span{
+           position:absolute;
+           top: 0.3rem;
+           right: 0.24rem;
+           color: white;
+           font-size: 0.22rem;
+       }
+       p{
+           font-size: .32rem;
+           color: white;
+           text-align: center;
+           line-height: 1rem;
+       }
+   }
+   section{
+       -webkit-box-flex: 1;
+       overflow: auto;
+       .jine{
+           .whb(100%,2.54rem,white);
+           text-align: center;
+           h1{
+               font-size: 0.26rem;
+               color: #787878;
+               padding-top: 0.5rem;
+               box-sizing: border-box;
+           }
+           h2{
+               font-size: 0.4rem;
+               color: #ff2b2b;
+               padding-top: 0.4rem;
+               box-sizing: border-box;
+           }
+       }
+   main{
+       .whb(100%,auto,white);
+       margin-top: 0.26rem;
+       padding-left: 0.55rem;
+       padding-top: 0.2rem;
+       box-sizing: border-box;
+       font-size: .24rem;
+       .tixianjine{
+           .whb(100%,0.74rem,none);
+           margin-top: .52rem;
+           .box(horizontal);
+           padding-right: 0.94rem;
+           box-sizing: border-box;
+               span{
+               color: #656565;
+               line-height: 0.74rem;
+               margin-right: .28rem;
+           }
+           .b-left{
+               .whb(2rem,0.74rem,none);
+           }
+           .b-right{
+               -webkit-box-flex: 1;
+               input{
+                   .whb(100%,0.74rem,none);
+                    outline: none;
+                    border: none;
+                    border: 1px solid #cacaca;                  
+                   border-radius: .1rem;
+                   padding-left: .5rem;
+                   box-sizing: border-box;
+               }
+           }
+       }
+       .daozhangfangshi{
+           color: #656565;
+           margin-top: 0.4rem;
+           padding-right: 0.33rem;
+           box-sizing: border-box;
+           .box(horizontal);
+           span{
+               margin-right: 0.7rem;
+               .whb(2rem,0.74rem,none);
+           }
+           .d_left{
+               -webkit-box-flex: 1;
+               input{
+                   margin: 0 0.2rem;
+                   width: 0.32rem;
+                   height: 0.32rem;
+               }
+               div{
+                   float: left;
+                   .whb(33%,auto,none);
+               }
+           }
+       }
+       .tixian{
+           color: #656565;
+           margin-top: 0.6rem;
+           span{
+               color: #ff2b2b;
+           }
+       }
+       .daozhang{
+           color: #656565;
+           margin-top: 0.52rem;
+           padding-bottom: 0.74rem;
+           span{
+               color: #ff2b2b;
+           }
+       }
+   }
+   .xiugai{
+        .whb(100%,.9rem,none);
+        margin-top: 2.8rem;
+        margin-bottom: .92rem;
+        padding: 0 1.2rem;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: .9rem;
+        font-size: 0.28rem;
+        color: white;
+        p{
+            .whb(100%,auto,#97c11f);
+            border-radius: .5rem;
+        }
+    }
+    }
+}

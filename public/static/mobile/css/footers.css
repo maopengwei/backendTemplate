@@ -1,0 +1,36 @@
+.wrap footer {
+  width: 100%;
+  height: 1.2rem;
+  background: #ffffff;
+  position: relative;
+}
+.wrap footer .xuanzhong {
+  color: #97c11f;
+}
+.wrap footer dl {
+  float: left;
+  width: 20%;
+  text-align: center;
+  margin-top: 0.1rem;
+}
+.wrap footer dt {
+  height: 28px;
+}
+.wrap footer dd {
+  height: 18px;
+  font-size: 0.22rem;
+  color: #bfbfbf;
+}
+.wrap footer .ailiao {
+  width: 1.35rem;
+  height: 1.2rem;
+  background: #ffffff;
+  text-align: center;
+  position: absolute;
+  top: -0.56rem;
+  left: 50%;
+  margin-left: -0.68rem;
+  border-radius: 50%;
+  padding: 0.3rem 0;
+  box-sizing: border-box;
+}

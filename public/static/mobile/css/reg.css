@@ -1,0 +1,181 @@
+@import url(reset.css);
+.full {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.wrap img {
+  transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  max-height: 100%;
+  max-width: 100%;
+}
+.wrap .header {
+  text-align: center;
+}
+.wrap .header img{
+  border-radius: 50%;
+}
+.wrap .zhanghao {
+  width: 100%;
+  height: 0.6rem;
+  background: none;
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+  margin-top: .4rem;
+  position: relative;
+}
+.wrap .zhanghao input {
+  width: 100%;
+  height: 0.6rem;
+  background: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #c2c2c2;
+  font-size: 0.24rem;
+  padding-top: 0.1rem;
+  padding-left: 0.6rem;
+}
+.wrap .zhanghao ::-webkit-input-placeholder {
+  color: #979797;
+}
+.wrap .zhanghao img {
+  position: absolute;
+}
+.wrap .mima {
+  width: 100%;
+  height: 0.6rem;
+  background: none;
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+  margin-top: .4rem;
+  position: relative;
+}
+.wrap .mima input {
+  width: 100%;
+  height: 0.6rem;
+  background: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #c2c2c2;
+  font-size: 0.24rem;
+  padding-top: 0.1rem;
+  padding-left: 0.6rem;
+}
+.wrap .mima ::-webkit-input-placeholder {
+  color: #979797;
+}
+.wrap .mima img {
+  position: absolute;
+}
+.wrap .querenmima {
+  width: 100%;
+  height: 0.6rem;
+  background: none;
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+  margin-top: .4rem;
+  position: relative;
+}
+.wrap .querenmima input {
+  width: 100%;
+  height: 0.6rem;
+  background: none;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #c2c2c2;
+  font-size: 0.24rem;
+  padding-top: 0.1rem;
+  padding-left: 0.6rem;
+}
+.wrap .querenmima ::-webkit-input-placeholder {
+  color: #979797;
+}
+.wrap .querenmima img {
+  position: absolute;
+}
+.wrap .yzm {
+  margin-top: .4rem;
+}
+.wrap .yzm span {
+  text-align: right;
+  font-size: .24rem;
+  color: #b1b1b1;
+  float: right;
+  margin-right: 0.4rem;
+}
+.wrap .zhuce {
+  width: 100%;
+  height: 0.9rem;
+  background: #ffffff;
+  margin-top: 0.8rem;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: .9rem;
+  font-size: 0.28rem;
+  color: white;
+}
+.wrap .zhuce .dianji {
+  width: 100%;
+  height: auto;
+  background: #97c11f;
+  border-radius: .5rem;
+}
+
+.wrap .denglu {
+    width: 100%;
+    height: 0.9rem;
+    background: white;
+    margin-top: 0.8rem;
+    padding: 0 1.2rem;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: .9rem;
+    font-size: 0.28rem;
+}
+
+.wrap .denglu .dianji {
+    width: 100%;
+    height: auto;
+    background: white;
+    border-radius: .5rem;
+    border: 1px solid #97c11f;
+}
+
+.wrap .disanfang {
+    margin-top: 1rem;
+    font-size: .24rem;
+    text-align: center;
+    color: #e7e7e7;
+}
+
+.wrap .footer {
+    text-align: center;
+    margin-top: .6rem;
+}
+
+.wrap .footer img:nth-child(1) {
+    margin-right: 0.8rem;
+}
+
+.wrap .footer img:nth-child(2) {
+    margin-left: 0.8rem;
+}

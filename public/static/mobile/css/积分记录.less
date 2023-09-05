@@ -1,0 +1,61 @@
+@import url(reset.css);
+//html{
+//  font-size: 62.5%;
+//}
+.full{
+    width: 100%;
+    height: 100%;
+}
+.whb(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background: @b;
+}
+html,body,.wrap{
+    .full;
+}
+.box(@dir){
+    display: -webkit-box;
+    -webkit-box-orient: @dir;
+}
+.wrap{
+    .box(vertical);
+   header{
+//     .box(horizontal);
+       .whb(100%,1rem,#97c11f);
+       position: relative;
+       img{
+           position: absolute;
+           top: 0.3rem;
+           left: 0.24rem;
+       }
+       p{
+           font-size: .32rem;
+           color: white;
+           text-align: center;
+           line-height: 1rem;
+       }
+   }
+   section{
+       -webkit-box-flex: 1;
+       overflow: auto;
+        font-size: 0.26rem;
+        padding: 0 0.2rem;
+        box-sizing: border-box;
+        table{
+            .whb(100%,auto,none);
+            margin-top: 0.3rem;
+        }
+        th{
+            color: white;
+            background: #97c11f;
+            border: none;
+            line-height: 0.68rem;
+//          border: 1px solid white;
+        }
+        td{
+            text-align: center;
+            line-height: 0.66rem;
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@import url(reset.css);
+.full {
+  width: 100%;
+  height: 100%;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  background: #f1f4f4;
+}
+.wrap header {
+  width: 100%;
+  height: 1rem;
+  background: #97c11f;
+  position: relative;
+}
+.wrap header img {
+  position: absolute;
+  top: 0.15rem;
+  left: 0.24rem;
+   transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+}
+.wrap header span {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.24rem;
+  color: white;
+  font-size: 0.22rem;
+}
+.wrap header p {
+  font-size: .32rem;
+  color: white;
+  text-align: center;
+  line-height: 1rem;
+}
+.wrap section {
+  -webkit-box-flex: 1;
+  overflow: auto;
+}
+.wrap section div {
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+.wrap section div img {
+  width: 100%;
+  height: 100%;
+  background: none;
+}

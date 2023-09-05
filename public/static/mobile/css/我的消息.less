@@ -1,0 +1,81 @@
+@import url(reset.css);
+//html{
+//  font-size: 62.5%;
+//}
+.full{
+    width: 100%;
+    height: 100%;
+}
+.whb(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background: @b;
+}
+html,body,.wrap{
+    .full;
+}
+.box(@dir){
+    display: -webkit-box;
+    -webkit-box-orient: @dir;
+}
+.wrap{
+    .box(vertical);
+    background: #f1f4f4;
+   header{
+       .whb(100%,1rem,#97c11f);
+       position: relative;
+       img{
+           position: absolute;
+           top: 0.3rem;
+           left: 0.24rem;
+       }
+       p{
+           font-size: .32rem;
+           color: white;
+           text-align: center;
+           line-height: 1rem;
+       }
+   }
+   section{
+       -webkit-box-flex: 1;
+       overflow: auto;
+       padding: 0.22rem;
+       box-sizing: border-box;
+       .gonggao{
+           .whb(100%,auto,white);
+           border-radius: 0.2rem;
+           p{
+               color: #171717;
+               font-size: 0.3rem;
+               padding: 0.34rem 0.4rem;
+               box-sizing: border-box;
+           }
+           span{
+               float: right;
+               color: #909090;
+               font-size: 0.24rem;
+           }
+           dl{
+               padding: 0 0.26rem 0.35rem 0.38rem;
+               box-sizing: border-box;
+               dt{
+                   float: left;
+                   .whb(45%,2.6rem,none);
+               }
+               dd{
+                   .whb(55%,2.6rem,none);
+                   float: left;
+                   font-size: 0.18rem;
+                   padding-left: 0.32rem;
+                   box-sizing: border-box;
+                   word-wrap:break-word; word-break:normal;//强制换行
+                   overflow-y: auto;
+               }
+           }
+           img{
+               .whb(100%,100%,none);
+               border-radius: 0.2rem;
+           }
+       }
+    }
+}

@@ -1,0 +1,68 @@
+@import url(reset.css);
+.full{
+    width: 100%;
+    height: 100%;
+}
+.whb(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background: @b;
+}
+html,body,.wrap{
+    .full;
+}
+.box(@dir){
+    display: -webkit-box;
+    -webkit-box-orient: @dir;
+}
+.wrap{
+    .box(vertical);
+    .whb(100%,100%,#f3f5f4);
+   header{
+       .whb(100%,1.04rem,#97c11f);
+       line-height: 1.04rem;
+       color: white;
+       h1{
+           font-size: .34rem;
+           text-align: center;
+       }
+   }
+  
+   section{
+       -webkit-box-flex: 1;
+       .jiedian{
+           .whb(100%,0.9rem,white);
+           margin-top: 0.2rem;
+           font-size: 0.3rem;
+           line-height: 0.9rem;
+           padding: 0 0.35rem;
+           box-sizing: border-box;
+       }
+       img{
+           margin-top: 0.34rem;
+       }
+       .img1{
+           float: left;
+       }
+       h2{
+           float: left;
+           margin-left: 0.35rem;
+       }
+       .img2{
+           float: right;
+       }
+   }
+   footer{
+       .whb(100%,1rem,white);
+       font-size: .2rem;
+       dl{
+           float: left;
+           text-align: center;
+           width: 50%;
+           margin-top: 0.1rem;
+       }
+       dd{
+           margin-top: 0.1rem;
+       }
+   }
+}

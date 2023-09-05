@@ -1,0 +1,155 @@
+{include file="public/_meta" /}
+<title>基本设置</title>
+<style>
+    input{
+        border:none;
+        text-align:center;
+    }
+</style>
+</head>
+
+<body>
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+        <span class="c-gray en">&gt;</span> 系统管理
+        <span class="c-gray en">&gt;</span> 基本设置
+        <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" onclick="ooo()" title="清楚缓存"><i class="Hui-iconfont">&#xe706;</i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+    </nav>
+    <div class="page-container">
+        <form class="form form-horizontal" id="form-article-add">
+            <div id="tab-system" class="HuiTab">
+                <div class="tabBar cl">
+                    <span>经销商参数</span>
+                    <span>精英参数</span>
+                </div>
+                <div class="tabCon">
+                   <table class="table table-border table-bordered table-bg">
+                        <thead>
+                            <tr class="text-c">
+                                <th width="60">名称</th>
+                                <th width="120">金额</th>
+                                <th width="120">零售折扣</th>
+                                <th width="100">零售业绩</th>
+                                <th width="90">零售见点奖励层数</th>
+                                <th width="150">零售见点奖励参数‰</th>
+                                <th width="100">静态拓扑奖%</th>
+                                <th width="100">拓扑奖励封顶%</th>
+                                <th width="100">直推奖励%</th>
+                                <th width="100">分销奖励%</th>
+                                <th width="100">分销奖励封顶</th>
+                                <th width="100">介绍</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {volist name='list' id="vo"}
+                            <tr class="text-c">
+                                <td><input type="text" value="{$vo.cal_name}" onchange="eee($(this).val(),'cal_name',{$i},1)"></td>
+                                <td><input type="text" value="{$vo.cal_money}" onchange="eee($(this).val(),'cal_money',{$i},1)"></td>
+                                <td><input type="text" value="{$vo.cal_zel_discount}" onchange="eee($(this).val(),'cal_zel_discount',{$i},1)"></td>
+                                <td><input type="text" value="{$vo.cal_zel_sales}" onchange="eee($(this).val(),'cal_zel_sales',{$i},1)"></td>
+                                <td><input type="text" value="{$vo.cal_zel_point_ceng}" onchange="eee($(this).val(),'cal_zel_point_ceng',{$i},1)"></td>
+                                <td><input type="text" value="{$vo.cal_zel_point_calcu}" onchange="eee($(this).val(),'cal_zel_point_calcu',{$i},1)"></td>
+                                <td><input type="text" value="{$vo.cal_sta_expand}" onchange="eee($(this).val(),'cal_sta_expand',{$i},1)"></td>
+                                <td><input type="text" value="{$vo.cal_sta_top}" onchange="eee($(this).val(),'cal_sta_top',{$i},1)"></td>
+                                <td><input type="text" value="{$vo.cal_direct}" onchange="eee($(this).val(),'cal_direct',{$i},1)"></td>
+                                <td><input type="text" value="{$vo.cal_distribution_profit}" onchange="eee($(this).val(),'cal_distribution_profit',{$i},1)"></td>
+                                <td><input type="text" value="{$vo.cal_distribution_top}" onchange="eee($(this).val(),'cal_distribution_top',{$i},1)"></td>
+                                <td>
+                                    <a title="编辑" href="javascript:;" onclick="create({$vo.id},'edit','修改详细')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                </td>
+                            </tr>
+                            {/volist}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tabCon">
+                    <table class="table table-border table-bordered table-bg">
+                        <thead>
+                            <tr class="text-c">
+                                <th width="60">名称</th>
+                                <th width="120">金额</th>
+                                <th width="120">参数</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {volist name='jing' id="vo"}
+                            <tr class="text-c">
+                                <td>{$vo.id}</td>
+                                <td><input type="text" value="{$vo.jing_money}" onchange="eee($(this).val(),'jing_money',{$i},2)"></td>
+                                <td><input type="text" value="{$vo.jing_calcu}" onchange="eee($(this).val(),'jing_calcu',{$i},2)"></td>
+                            </tr>
+                            {/volist}
+                        </tbody>
+                    </table>
+                </div>
+        </form>
+    </div>
+    {include file="public/_footer" /}
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript">
+    $('.form input[name="status"][value=' + "{:cache('setting')['status']}" + ']').attr("checked", true);
+
+    function create(id,url,key){
+        var url = "{:url('"+url+"')}?id="+id;
+        creatIframe(url,key);
+    }
+
+    $(function() {
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+        $("#tab-system").Huitab({
+            index: 0
+        });
+    });
+
+    function eee(val,key,i,type){
+        // console.log(val);
+        // console.log(key);
+        // console.log(i);
+        layer.confirm(
+            '确定要更改么？', 
+            { btn: ['确定', '取消'] }, 
+            function(index, layero){
+                $.ajax({
+                    type: "post",
+                    url: "{:url('system')}",
+                    data: {val:val,key:key,i:i,type:type},
+                    success: function(data) {
+                        layer.msg('修改成功');
+                        // if(data.code){
+                        //     location.href = '';
+                        // }
+                    }
+                })
+            },
+            function(index,layero){
+               location.href = ''; 
+            }
+        );
+    }
+    // /setting/saveinfo
+    function saveConfig() {
+        $.post("{:url('setting/index')}", $('.form').serialize()).success(function(data) {
+            layer.msg(data.msg);
+            if (!data.code) {
+                $('.rst').click();
+            }
+        });
+        return false;
+    }
+
+    function ooo() {
+        $.post("{:url('every/clear')}").success(function(data) {
+            layer.msg('清除成功');
+        });
+        return false;
+    }
+
+    </script>
+        <!--/请在上方写此页面业务相关的脚本-->
+</body>
+
+</html>

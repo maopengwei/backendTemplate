@@ -1,0 +1,240 @@
+@import url(reset.css);
+.full {
+  width: 100%;
+  height: 100%;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  height: 100%;
+  background: #f3f5f4;
+  position: relative;
+}
+.wrap .b_shadow {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.5;
+  position: fixed;
+  display: none;
+  z-index: 999;
+}
+.wrap .b_zhe {
+  width: 100%;
+  height: auto;
+  background: none;
+  padding: 0 0.24rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  display: none;
+  z-index: 1000;
+}
+.wrap .b_zhe div {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border-radius: 0.2rem;
+  font-size: 0.3rem;
+}
+.wrap .b_zhe div p {
+  line-height: 0.66rem;
+  background: #97c11f;
+  border-top-right-radius: 0.2rem;
+  border-top-left-radius: 0.2rem;
+  color: white;
+  text-align: center;
+}
+.wrap .b_zhe div p img {
+  float: right;
+  margin-right: 0.25rem;
+}
+.wrap .b_zhe div ul {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  margin-top: 0.5rem;
+}
+.wrap .b_zhe div ul li {
+  width: 25%;
+  height: auto;
+  background: none;
+  text-align: center;
+}
+.wrap .b_zhe div ul input {
+  width: 0.32rem;
+  height: 0.32rem;
+  margin-right: 0.36rem;
+}
+.wrap .b_zhe div h5 {
+  font-size: 0.28rem;
+  color: #ff2b2b;
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+  line-height: 0.92rem;
+}
+.wrap .b_zhe div h5 span {
+  font-size: 0.26rem;
+  color: #abcd49;
+  float: right;
+}
+.wrap .b_zhe div h4 {
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0.82rem;
+  background: none;
+}
+.wrap .b_zhe div h4 .queding {
+  margin-right: 0.23rem;
+  float: left;
+}
+.wrap .b_zhe div h4 .quxiao {
+  float: right;
+  margin-left: 0.23rem;
+}
+.wrap .b_zhe div h4 span {
+  width: 46%;
+  height: 0.82rem;
+  background: #97c11f;
+  color: white;
+  display: block;
+  text-align: center;
+  line-height: 0.82rem;
+  border-radius: 0.1rem;
+  margin-bottom: 0.72rem;
+  margin-top: 0.3rem;
+}
+.wrap img {
+  transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  max-height: 100%;
+  max-width: 100%;
+}
+.wrap header {
+  width: 100%;
+  height: 1.04rem;
+  background: #97c11f;
+  line-height: 1.04rem;
+  color: white;
+  position: relative;
+}
+.wrap header img {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.24rem;
+}
+.wrap header h1 {
+  font-size: .34rem;
+  text-align: center;
+}
+.wrap section {
+  -webkit-box-flex: 1;
+}
+.wrap section .banner {
+  width: 100%;
+  height: 0.9rem;
+  background: #ffffff;
+  margin-top: 0.2rem;
+}
+.wrap section .banner ul {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+   text-align: center;
+}
+.wrap section .banner ul li {
+  width: 25%;
+  height: auto;
+  background: none;
+  font-size: 0.24rem;
+  line-height: 0.9rem;
+ 
+}
+.wrap section .banner ul .tab {
+  color: #97c11f;
+  border-bottom: 2px solid #97c11f;
+  box-sizing: border-box;
+}
+.wrap section .jiedian {
+  width: 100%;
+  height: 0.9rem;
+  background: #ffffff;
+  margin-top: 0.2rem;
+  font-size: 0.3rem;
+  line-height: 0.9rem;
+  padding: 0 0.35rem;
+  box-sizing: border-box;
+}
+.wrap section img {
+  margin-top: 0.15rem;
+}
+.wrap section .img1 {
+  float: left;
+}
+.wrap section h2 {
+  float: left;
+  margin-left: 0.35rem;
+}
+.wrap section .img2 {
+  float: right;
+}
+.wrap footer {
+  width: 100%;
+  height: 1rem;
+  background: #ffffff;
+  font-size: .2rem;
+}
+.wrap footer dl {
+  float: left;
+  text-align: center;
+  width: 50%;
+}
+.wrap footer dt {
+  height: 30px;
+}
+.wrap footer dd {
+  height: 20px;
+}
+h7{
+  text-align: left;
+  font-size: 0.12rem;
+  color: red;
+  margin-left: 1.6rem;
+}
+h8{
+  width: 100%;
+  height: 0.74rem;
+  padding:0 0.3rem;
+  box-sizing: border-box;
+  margin-top: 0.2rem;
+  display: -webkit-box;
+  -webkit-box-orient:horizontal;
+}
+h8 span{
+  display: block;
+  width:1.3rem;
+  text-align: left;
+  line-height: 0.74rem;
+}
+h8 input{
+  display: block;
+  -webkit-box-flex:1;
+  width: 100%;
+  height:0.74rem;
+  box-sizing: border-box;
+  padding-left: 0.2rem;
+  outline: none;
+  border: none;
+  border: 1px solid #cccccc;
+  border-radius: 0.1rem;
+}

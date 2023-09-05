@@ -1,0 +1,77 @@
+@import url(reset.css);
+//html{
+//  font-size: 62.5%;
+//}
+.full{
+    width: 100%;
+    height: 100%;
+}
+.whb(@w,@h,@b){
+    width: @w;
+    height: @h;
+    background: @b;
+}
+html,body,.wrap{
+    .full;
+}
+.box(@dir){
+    display: -webkit-box;
+    -webkit-box-orient: @dir;
+}
+.wrap{
+    .box(vertical);
+   header{
+       .whb(100%,1.04rem,#97c11f);
+       line-height: 1.04rem;
+       color: white;
+       h1{
+           font-size: .34rem;
+           text-align: center;
+       }
+   }
+   section{
+       .whb(100%,100%,#f3f5f4);
+       -webkit-box-flex: 1;
+       overflow: auto;
+       dl{
+           margin-top: 1.38rem;
+           text-align: center;
+       }
+       dd{
+           font-size: 0.3rem;
+           margin-top: 0.3rem;
+       }
+       h2{
+           font-size: 0.24rem;
+           color: #fd4339;
+           text-align: center;
+           margin-top: 0.94rem;
+           img{
+               margin-right: 0.24rem;
+           }
+       }
+       ul{
+           font-size: 0.24rem;
+           color: #fe362b;
+           margin-top: 0.36rem;
+           padding: 0 0.36rem;
+           box-sizing: border-box;
+       }
+     
+       .xufei{
+           .whb(100%,0.9rem,none);
+           text-align: center;
+           padding: 0 1.22rem;
+           box-sizing: border-box;
+           margin-top: 2.36rem;
+           button{
+               .whb(100%,0.9rem,#97c11f);
+               font-size: 0.28rem;
+               color: white;
+               border: none;
+               outline: none;
+               border-radius: 0.5rem;
+           }
+       }
+}
+}

@@ -1,0 +1,88 @@
+@import url(reset.css);
+.full {
+  width: 100%;
+  height: 100%;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  background:#f3f5f4;
+}
+.wrap header {
+  width: 100%;
+  height: 0.88rem;
+  background: #97c11f;
+  text-align: center;
+  line-height: 0.88rem;
+  position: relative;
+  color: white;
+}
+.wrap header h1 {
+  font-size: 0.32rem;
+  font-weight: bold;
+}
+.wrap header span {
+  width: 0.3rem;
+  height: 0.3rem;
+  background: none;
+  display: block;
+  border: 3px solid white;
+  border-top: none;
+  border-right: none;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+}
+.wrap section {
+  -webkit-box-flex: 1;
+  overflow: auto;
+}
+.wrap section ul {
+  width: 100%;
+  height: auto;
+  background: none;
+  margin-top: 0.3rem;
+}
+.wrap section ul li {
+  width: 100%;
+  height: 1.87rem;
+  background: none;
+  padding: 0 0.8rem 0 0.4rem;
+  box-sizing: border-box;
+  border: 1px solid #97c11f;
+  font-size: 0.25rem;
+  border-radius: 0.2rem;
+  margin-bottom: 0.1rem;
+}
+.wrap section ul li span {
+  font-size: 0.2rem;
+}
+.wrap section ul li dt {
+  float: right;
+  line-height: 1.87rem;
+}
+.wrap section ul li dt img {
+  width: 1rem;
+  height: 1rem;
+}
+.wrap section ul li dd {
+  float: left;
+  padding-top: 0.2rem;
+}
+.wrap section ul li dd p {
+  line-height: 0.48rem;
+}
+.wrap section ul li dd span {
+  margin-left: 1rem;
+  font-family: "PingFang-SC-Regular";
+}
+.wrap section ul li dd .shijian {
+  margin-left: 0.45rem;
+}

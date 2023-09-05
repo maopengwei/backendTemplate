@@ -1,0 +1,113 @@
+@import url(reset.css);
+.full {
+  width: 100%;
+  height: 100%;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.wrap img {
+  transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  max-height: 100%;
+  max-width: 100%;
+}
+.wrap header {
+  width: 100%;
+  height: 0.88rem;
+  background: #97c11f;
+  line-height: 0.88rem;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  padding: 0 0.24rem;
+  box-sizing: border-box;
+}
+.wrap header .h_left {
+  -webkit-box-flex: 1;
+  position: relative;
+}
+.wrap header .h_left input {
+  width: 100%;
+  height: 0.6rem;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 0.1rem;
+  padding-left: 0.8rem;
+  box-sizing: border-box;
+  font-size: 0.24rem;
+}
+.wrap header .h_left ::-webkit-input-placeholder {
+  font-size: 0.24rem;
+  color: #d5d5d5;
+}
+.wrap header .h_left .i_search {
+  position: absolute;
+  top: 0.22rem;
+  left: 0.16rem;
+}
+.wrap header .h_right {
+  margin-left: 0.38rem;
+}
+.wrap section {
+  -webkit-box-flex: 1;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  background: #f3f5f4;
+}
+.wrap section dl {
+  text-align: center;
+  margin-top: 10%;
+}
+.wrap section dd {
+  font-size: 0.18rem;
+  color: #cecece;
+  margin-top: .5rem;
+}
+.wrap footer {
+  width: 100%;
+  height: 1.3rem;
+  background: #ffffff;
+  position: relative;
+}
+.wrap footer .xuanzhong {
+  color: #97c11f;
+}
+.wrap footer dl {
+  float: left;
+  width: 20%;
+  text-align: center;
+  margin-top: 0.1rem;
+}
+.wrap footer dt {
+  height: 28px;
+}
+.wrap footer dd {
+  height: 18px;
+  font-size: 0.22rem;
+  color: #bfbfbf;
+}
+.wrap footer .ailiao {
+  width: 1.35rem;
+  height: 1.2rem;
+  background: #ffffff;
+  text-align: center;
+  position: absolute;
+  top: -0.56rem;
+  left: 50%;
+  margin-left: -0.68rem;
+  border-radius: 50%;
+  padding: 0.3rem 0;
+  box-sizing: border-box;
+}

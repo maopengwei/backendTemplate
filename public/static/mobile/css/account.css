@@ -1,0 +1,172 @@
+@import url(reset.css);
+.full {
+  width: 100%;
+  height: 100%;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+.wrap header {
+  width: 100%;
+  height: 1rem;
+  background: #97c11f;
+  position: relative;
+}
+.wrap header img {
+  position: absolute;
+  top: 0.15rem;
+  left: 0.24rem;
+   transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+}
+.wrap header p {
+  font-size: .32rem;
+  color: white;
+  text-align: center;
+  line-height: 1rem;
+}
+.wrap header span{
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  font-size: 0.28rem;
+  color: white;
+}
+.wrap section {
+  -webkit-box-flex: 1;
+  overflow: auto;
+}
+.wrap section .banner {
+  width: 100%;
+  height: 0.9rem;
+  background: #ffffff;
+}
+.wrap section .banner ul {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+   text-align: center;
+}
+.wrap section .banner ul li {
+  width: 33%;
+  height: auto;
+  background: none;
+  font-size: 0.24rem;
+  line-height: 0.9rem;
+ 
+}
+.wrap section .banner ul .tab {
+  color: #97c11f;
+  border-bottom: 2px solid #97c11f;
+  box-sizing: border-box;
+}
+.wrap section main {
+  width: 100%;
+  height: auto;
+  background: none;
+  padding-right: 0.9rem;
+  box-sizing: border-box;
+  font-size: 0.24rem
+}
+.wrap section main .bianhao {
+  width: 100%;
+  height: 0.74rem;
+  background: none;
+  margin-top: .52rem;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+.wrap section main .bianhao span {
+  font-size: .24rem;
+  color: #656565;
+  line-height: 0.74rem;
+  margin-right: .28rem;
+}
+.wrap section main .bianhao .b-left {
+  width: 2.06rem;
+  height: 0.74rem;
+  background: none;
+  text-align: right;
+}
+.wrap section main .bianhao .b-right {
+  -webkit-box-flex: 1;
+  position: relative;
+}
+.wrap section main .bianhao .b-right input {
+  width: 100%;
+  height: 0.74rem;
+  background: none;
+  outline: none;
+  border: none;
+  border: 1px solid #cacaca;
+  border-radius: .1rem;
+  padding-left: .5rem;
+  box-sizing: border-box;
+}
+.wrap section main .bianhao .b-right span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: dodgerblue;
+}
+.wrap section main .touxiang {
+  width: 100%;
+  height: 2rem;
+  background: none;
+  margin-top: 0.3rem;
+  font-size: 0.24rem;
+  display: -webkit-box;
+   padding-left: 1.3rem;
+  box-sizing: border-box;
+}
+.wrap section main .touxiang span {
+  color: #656565;
+  width: 1.76rem;
+  height: auto;
+  background: none;
+  text-align: right;
+  line-height: 0.74rem;
+ 
+}
+.wrap section main .touxiang div {
+  width: 100%;
+  height: 0.74rem;
+  background: none;
+  padding-left: 0.4rem;
+  box-sizing: border-box;
+}
+.wrap section main .touxiang div img {
+  width: 2rem;
+  height: 2rem;
+  background: none;
+}
+.wrap section main .touxiang div input {
+  display: none;
+}
+.wrap section .xiugai{
+  width: 100%;
+  height: 0.9rem;
+  background: #ffffff;
+  margin-top: 1rem;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: .9rem;
+  font-size: 0.28rem;
+  color: white;
+}
+.wrap section .xiugai p{
+  width: 100%;
+  height: auto;
+  background: #97c11f;
+  border-radius: .5rem;
+}

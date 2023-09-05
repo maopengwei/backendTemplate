@@ -1,0 +1,171 @@
+@import url(reset.css);
+.full {
+  width: 100%;
+  height: 100%;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  background: #f1f4f4;
+}
+.wrap img {
+  transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  max-height: 100%;
+  max-width: 100%;
+}
+.wrap header {
+  width: 100%;
+  height: 1rem;
+  background: #97c11f;
+  position: relative;
+}
+.wrap header img {
+  position: absolute;
+  top: 0.15rem;
+  left: 0.24rem;
+}
+.wrap header span {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.24rem;
+  color: white;
+  font-size: 0.22rem;
+}
+.wrap header p {
+  font-size: .32rem;
+  color: white;
+  text-align: center;
+  line-height: 1rem;
+}
+.wrap section {
+  -webkit-box-flex: 1;
+  overflow: auto;
+}
+.wrap section .jine {
+  width: 100%;
+  background: none;
+  text-align: center;
+}
+.wrap section .jine h2 {
+  background: white;
+  font-size: 0.4rem;
+  color: #97c11f;
+  padding: 0.2rem 0;
+  box-sizing: border-box;
+}
+.wrap section main {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  margin-top: 0.2rem;
+  padding-left: 0.55rem;
+  padding-top: 0.2rem;
+  box-sizing: border-box;
+  font-size: .24rem;
+}
+.wrap section main .tixianjine {
+  width: 100%;
+  height: 0.74rem;
+  background: none;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  padding-right: 0.94rem;
+  box-sizing: border-box;
+  margin-top:0.2rem;
+}
+.wrap section main .tixianjine span {
+  color: #656565;
+  line-height: 0.74rem;
+  margin-right: .28rem;
+}
+.wrap section main .tixianjine .b-left {
+  width: 2rem;
+  height: 0.74rem;
+  background: none;
+}
+.wrap section main .tixianjine .b-right {
+  -webkit-box-flex: 1;
+}
+.wrap section main .tixianjine .b-right input {
+  width: 100%;
+  height: 0.74rem;
+  background: none;
+  outline: none;
+  border: none;
+  border: 1px solid #cacaca;
+  border-radius: .1rem;
+  padding-left: .5rem;
+  box-sizing: border-box;
+}
+.wrap section main .daozhangfangshi {
+  color: #656565;
+  margin-top: 0.4rem;
+  padding-right: 0.33rem;
+  box-sizing: border-box;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+.wrap section main .daozhangfangshi span {
+  margin-right: 0.7rem;
+  width: 2rem;
+  height: 0.74rem;
+  background: none;
+}
+.wrap section main .daozhangfangshi .d_left {
+  -webkit-box-flex: 1;
+}
+.wrap section main .daozhangfangshi .d_left input {
+  margin: 0 0.2rem;
+  width: 0.32rem;
+  height: 0.32rem;
+}
+.wrap section main .daozhangfangshi .d_left div {
+  float: left;
+  width: 33%;
+  height: auto;
+  background: none;
+}
+.wrap section main .tixian {
+  color: #656565;
+  margin-top: 0.6rem;
+}
+.wrap section main .tixian span {
+  color: #ff2b2b;
+}
+.wrap section main .daozhang {
+  color: #656565;
+  margin-top: 0.52rem;
+  padding-bottom: 0.74rem;
+}
+.wrap section main .daozhang span {
+  color: #ff2b2b;
+}
+.wrap section .xiugai {
+  width: 100%;
+  height: 0.9rem;
+  background: none;
+  margin-top: 1.2rem;
+  margin-bottom: .92rem;
+  padding: 0 1.2rem;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: .9rem;
+  font-size: 0.28rem;
+  color: white;
+}
+.wrap section .xiugai p {
+  width: 100%;
+  height: auto;
+  background: #97c11f;
+  border-radius: .5rem;
+}

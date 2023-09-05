@@ -1,0 +1,84 @@
+@import url(reset.css);
+.full {
+  width: 100%;
+  height: 100%;
+}
+html,
+body,
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+.wrap {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  background: #f1f4f4;
+}
+.wrap header {
+  width: 100%;
+  height: 1rem;
+  background: #97c11f;
+  position: relative;
+}
+.wrap header img {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.24rem;
+}
+.wrap header p {
+  font-size: .32rem;
+  color: white;
+  text-align: center;
+  line-height: 1rem;
+}
+.wrap section {
+  -webkit-box-flex: 1;
+  overflow: auto;
+  padding: 0.22rem;
+  box-sizing: border-box;
+}
+.wrap section .gonggao {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border-radius: 0.2rem;
+}
+.wrap section .gonggao p {
+  color: #171717;
+  font-size: 0.3rem;
+  padding: 0.34rem 0.4rem;
+  box-sizing: border-box;
+}
+.wrap section .gonggao span {
+  float: right;
+  color: #909090;
+  font-size: 0.24rem;
+}
+.wrap section .gonggao dl {
+  padding: 0 0.26rem 0.35rem 0.38rem;
+  box-sizing: border-box;
+}
+.wrap section .gonggao dl dt {
+  float: left;
+  width: 45%;
+  height: 2.6rem;
+  background: none;
+}
+.wrap section .gonggao dl dd {
+  width: 55%;
+  height: 2.6rem;
+  background: none;
+  float: left;
+  font-size: 0.18rem;
+  padding-left: 0.32rem;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  word-break: normal;
+  overflow-y: auto;
+}
+.wrap section .gonggao img {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border-radius: 0.2rem;
+}
