@@ -55,6 +55,54 @@ class User extends Common {
 		));
 		return $this->fetch();
 	}
+
+	//用户列表
+	public function indexs() {
+
+		if (is_post()) {
+			$rst = model('User')->xiugai([input('post.key') => input('post.value')], ['id' => input('post.id')]);
+			return $rst;
+		}
+		if (input('get.keywords')) {
+			$this->map[] = ['us_tel|us_account|us_real_name', '=', input('get.keywords')];
+		}
+		if (is_numeric(input('get.us_status'))) {
+			$this->map[] = ['us_status', '=', input('get.us_status')];
+		}
+		if (is_numeric(input('get.us_is_jing'))) {
+			$this->map[] = ['us_is_jing', '=', input('get.us_is_jing')];
+		}
+		$get = $this->request->get();
+		
+		if(!empty($get['excel'])){
+			$sql =  DB::table('new_user')
+			->alias('u')
+			->join('user pu','pu.id = u.us_pid')
+			->where($this->map)
+			->field('
+				u.id,
+				u.us_account,
+				u.us_tel,
+				u.us_real_name,
+				u.us_status,
+				pu.us_account as p_account,
+				u.us_add_time
+			')
+			->order('u.id desc')
+			->fetchSql(true)
+			->select();
+			Excel::sql('user',$sql);
+
+		}
+
+		$list = model('User')->chaxun($this->map, $this->order, $this->size);
+		$this->assign(array(
+			'yuming' => $_SERVER['HTTP_HOST'],
+			'list' => $list,
+		));
+		return $this->fetch();
+	}
+
 	//添加
 	public function add() {
 		if (is_post()) {
@@ -113,7 +161,7 @@ class User extends Common {
 			
 		}
 		$this->assign('info', $info);
-		return $this->fetch();
+		return $this->fetch('indexs.html');
 	}
 	//升级经销商
 	public function up(){
